@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Ejercicio 2</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function calDist(){
+			var $mensaje;
+			v = document.getElementById("val").value;
+			v = v.split(' ');
+			X = Math.max.apply(null, v);
+			
+			document.getElementById('resp').innerHTML = 'El mayor es: '+X;
+		}
+		
+	</script>
+
+Ingrese valores separados por espacios y aprete el botón. <br>
+
+	<form>
+		<input type="text" id="val">
+		<button type="button" onclick="calDist()">Calcula</button>
+		<br>
+		<div id="resp"></div>
+	</form>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Ejercicio 1</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function calDist(){
+			var $mensaje;
+			v = document.getElementById("val").value;
+
+			if(v.length > 0){
+				if(v <= 1000){
+					$mensaje = "Circularas a pie";
+				}else if(v > 1000 && v <= 10000){
+					$mensaje = "Circularas en bicicleta";
+				}else if(v > 10000 && v <= 30000){
+					$mensaje = "Circularas en colectivo";
+				}else if(v > 30000 && v <= 100000){
+					$mensaje = "Circularas en auto";
+				}else if(v > 100000 && v <= 1000000){
+					$mensaje = "Circularas en avión";
+				}else{
+					$mensaje = "Circularas a 300.000 km/s, como un fotón.";
+				}
+				document.getElementById('resp').innerHTML = $mensaje;
+			}else{
+				document.getElementById('resp').innerHTML = "Ingrese un valor.";
+			}
+		}
+		
+	</script>
+
+Ingrese un valor en metros y aprete el botón. <br>
+	<form>
+		<input type="number" id="val">
+		<button type="button" onclick="calDist()">Calcula</button>
+		<br>
+		<div id="resp"></div>
+	</form>
+
+</body>
+</html>
