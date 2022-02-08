@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Ejercicio 1</title>
+	<style type="text/css">
+		.contenedor{
+			width: 100%;
+			display: inline-flex;
+			flex-direction: row;
+			justify-content: center;
+		}
+		.boton {
+			width: 100px;
+			height: 100px;
+			border: solid 2px black;
+			text-align: center;
+			line-height: 100px;
+			margin: 15px;
+			margin-top: 22.5%;
+			color:  white;
+		}
+
+		.boton.rojo {
+			background-color: #DD4A48;
+		}
+		.boton.verde {
+			background-color: #91C483;
+		}
+		.boton.azul {
+			background-color: #325288;
+		}
+	</style>
+</head>
+<body>
+	<div class="contenedor">
+		<div class="boton rojo">Boton 1</div>
+		<div class="boton verde">Boton 2</div>
+		<div class="boton azul">Boton 3</div>
+	</div>
+
+
+	<script type="text/javascript">
+		botones = document.querySelectorAll('.boton');	
+
+		//por cada boton encontrado, creamos un evento de tipo click y definimos el cambio de color comparando las etiquetas de clase.
+		botones.forEach((boton)=>{
+		 boton.addEventListener('click',(event)=>{
+		 	if(boton.className == 'boton rojo'){
+		 		document.body.style = "background-color:#DD4A48;";
+		 	}else if(boton.className == 'boton verde'){
+		 		document.body.style = "background-color:#91C483;";
+		 	}else{
+		 		document.body.style = "background-color:#325288;";
+		 	}
+		 });
+		});
+		
+	</script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Ejercicio 3</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var alumnos = [
+		  {
+		    nombre: 'Juan Gomez',
+		    nota: 7
+		  }, {
+		    nombre: 'Pedro Rodriguez',
+		    nota: 4
+		  }, {
+		    nombre: 'Roxana García',
+		    nota: 8
+		  }, {
+		    nombre: 'Luciano Lopez',
+		    nota: 5
+		  }, {
+		    nombre: 'Fernanda Gimenez',
+		    nota: 6
+		  }, {
+		    nombre: 'Florencia Martinez',
+		    nota: 10
+		  }, {
+		    nombre: 'Raul Sanchez',
+		    nota: 7
+		  }, {
+		    nombre: 'Sandra Figueroa',
+		    nota: 8
+		  }
+
+		];
+
+		//metodo 1
+		for (var i = alumnos.length - 1; i >= 0; i--) {
+			if(alumnos[i].nota >= 7){
+				console.log(alumnos[i]);
+			}
+		}
+
+		//metodo 2
+		aprobados = alumnos.filter(alumno => alumno.nota >= 7);
+		console.log(aprobados);
+
+		
+		
+	</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Ejercicio 2</title>
+	<style type="text/css">
+		.contenedor{
+			width: 100%;
+			display: inline-flex;
+			flex-direction: row;
+			justify-content: center;
+		}
+		#text{
+			margin-top: 150px;
+		}
+
+		
+	</style>
+</head>
+<body>
+	<div class="contenedor">
+		<div>
+			<textarea id="text" cols="50" rows="10"></textarea>
+			<div>
+			<b>Caracteres:</b> <div id="contador">22</div>
+			</div>
+		</div>
+
+	</div>
+
+
+	<script type="text/javascript">
+		textArea = document.getElementById('text');
+		cont = document.getElementById('contador');
+		textArea.focus();
+
+		textArea.addEventListener('keyup', function(){
+			cont.innerHTML = textArea.value.length;
+		}, false);
+		
+	</script>
+</body>
+</html>
